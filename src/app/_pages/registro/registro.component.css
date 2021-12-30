@@ -1,0 +1,38 @@
+
+.register-card{
+    padding: 38px;
+    text-align: center;
+}
+
+.register-form-field{
+    width: 300px;
+}
+
+.register-title{
+    font-size: 22px;
+    font-family: Roboto,Helvetica Neue,sans-serif;
+    letter-spacing: normal;
+    font-weight: 600;
+    line-height: inherit;
+    color: rgb(56, 56, 56);
+}
+
+.register-subtitle{
+    margin-top: -10px;
+    font-size: 15px;
+    font-family: Roboto,Helvetica Neue,sans-serif;
+    letter-spacing: normal;
+    font-weight: 500;
+    line-height: inherit;
+    color: rgb(94, 94, 94);
+}
+
+.register-body-font{
+    font-family: Roboto,Helvetica Neue,sans-serif;
+    letter-spacing: normal;
+    line-height: inherit;
+}
+
+.icon-color{
+    color: rgb(102, 102, 102);
+}

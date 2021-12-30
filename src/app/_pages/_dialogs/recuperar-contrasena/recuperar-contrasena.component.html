@@ -1,0 +1,30 @@
+<div mat-dialog-content >
+    <div>
+      <img src="./assets/img/logoN.svg" width="55" height="60">
+    </div>
+    <div class="text-title">Necesitamos comprobar tu identidad</div>
+  </div>
+  <div >
+    <form >
+      <p style="width: 250px;">
+        Para verificar que tus credenciales son correctas, completa el formulario con tu dirección de correo y usuario.
+        Luego haz clic en "Aceptar" para recibir tu código.
+      </p>
+      <mat-form-field class="textfield">
+        <mat-label>Usuario</mat-label>
+        <input matInput #entradaNombre formControlName="usuario" placeholder="Escriba su nombre de usuario">
+        <mat-hint align="end">{{entradaNombre.value?.length || 0}}/20</mat-hint>
+
+      </mat-form-field>
+      <mat-form-field class="textfield">
+        <mat-label>Correo</mat-label>
+        <input matInput #entradaCorreo formControlName="correo" placeholder="Escriba su dirección de correo">
+        <mat-hint align="end">{{entradaCorreo.value?.length || 0}}/50</mat-hint>      </mat-form-field>
+      <div mat-dialog-actions>
+        <button mat-button mat-dialog-close>Aceptar</button>
+        <button mat-button mat-dialog-close>Cancelar</button>
+      </div>
+  </form>
+  </div>
+  
+  

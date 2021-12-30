@@ -1,0 +1,82 @@
+<div class="content">
+    <mat-card class="login-card">
+        <mat-card-content>
+            <div class="flex-row">
+                <div class="left-side">
+                    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+                        <div class="banner-title">
+                            ¡BIENVENIDO!
+                        </div>
+                        <div class="banner-subtitle">
+                            Editor de reportes
+                        </div>
+                    </div>
+                    <div style="margin-top: 250px;"></div>
+                    <div fxLayout="column" fxLayoutAlign="end start" fxLayoutGap="20px" style="margin-left: 25px;">
+                        <div class="body-text-banner">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" class="check-icon">done</mat-icon>Informes eficaces y rápidos para tus clientes
+                        </div>
+                        <div class="body-text-banner">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" class="check-icon">done</mat-icon>Apis de googles Ads, Facebook, instagram
+                        </div>
+                        <div class="body-text-banner">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" class="check-icon">done</mat-icon>Analitica en negocios
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <div class="right-side">
+                    <div fxLayout="column" fxLayoutAlign="center center">
+                        <h2 class="login-title">¡HOLA!</h2>
+                        <h2 class="login-subtitle">Ingresa a tu cuenta</h2>
+                        <div class="line">
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div [formGroup]="form" fxLayout="column" fxLayoutGap="1px">
+
+                        <mat-form-field fxFlex="grow" appearance="outline" class="textfield-form">
+                            <mat-label>Nombre de usuario</mat-label>
+                            <input formControlName="usuario" matInput required>
+                        </mat-form-field>
+
+                        <mat-form-field fxFlex="grow" appearance="outline" class="textfield-form">
+                            <mat-label>Constraseña</mat-label>
+                            <input [type]="inputType" formControlName="contrasena" matInput required>
+                            <button (click)="toggleVisibility()" mat-icon-button matSuffix
+                                matTooltip="Toggle Visibility" type="button">
+                                <mat-icon class="icon-color">{{visible ? 'visibility_off' : 'visibility'}}
+                                </mat-icon>
+                            </button>
+                            <mat-hint>Presiona el ojo para ver tu contraseña</mat-hint>
+                            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="body-text ">
+                        <mat-checkbox>Recuerdame</mat-checkbox>
+                    </div>
+                    <br>
+                    <button (click)="onFromSubmit()" color="primary" [disabled]=form.invalid mat-raised-button
+                        type="button" class="button-form">
+                        INGRESAR
+                    </button>
+
+                    <p class="register-body-font">
+                        <br />
+                        <br>
+                        <a [routerLink]="['/login']" class="forgot-text" (click)="openDialog()">¿Olvidaste la contraseña?</a>
+                        <br>
+                        <br>
+                    </p>
+
+
+
+
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

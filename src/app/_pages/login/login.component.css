@@ -1,0 +1,120 @@
+  .content {
+    height: 100%;
+    background: url(src\assets\img\BG.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.left-side{
+    position: relative;
+    width: 100%;
+    background: url(src\assets\img\BGLogin.jpg);
+    background-size: cover;
+    opacity: 80%;
+    filter: contrast(170%);
+  }
+  
+  .right-side{  
+    position: relative;  
+    align-items: center;
+    background: rgb(255,255,255);
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-shadow: 4px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .flex-row div{
+    flex: 100%;   
+    align-items: center;
+  }
+
+  .login-card{
+    box-shadow: 4px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    width: 55%;
+    text-align: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 5%, rgba(255,255,255,0) 90%);
+
+  }
+
+  .login-title{
+    color: #3f3f3f;
+    margin-top: 30px;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+  }
+
+  .banner-title{
+    color: #ffffff;
+    margin-top: 35px;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+  }
+
+  .banner-subtitle{
+    color: #a8a8a8;
+    font-size: 28px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+  }
+  
+  .login-subtitle{
+    margin-top: -15px;
+    margin-bottom: 15px;
+    font-size: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: #646464;
+  }
+
+
+  .textfield-form{
+    width: 70%;
+    
+  }
+
+  .button-form{
+    width: 70%;
+  }
+
+  .line{
+    width: 80%;
+    height: 2px;
+    background: #d8d8d8;
+  }
+
+  .body-text{
+    margin-left: 15%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+    color: #646464;
+
+  }
+
+  .forgot-text{
+    color: #7d05ac;
+  }
+
+
+  .check-icon{
+    color: #ffffff;
+    fill: #ffffff;
+  }
+
+  .body-text-banner{
+    color: #cacaca;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+  }

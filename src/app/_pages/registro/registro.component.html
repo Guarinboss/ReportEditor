@@ -1,0 +1,57 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <mat-card class="register-card">
+    <div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <div>
+          <img src="assets/img/logo.png" width="100px" height="100px">
+        </div>
+      </div>
+
+      <div>
+        <h2 class="register-title">Registra tu cuenta</h2>
+        <h4 class="register-subtitle">Simplemente llena el formulario</h4>
+      </div>
+
+      <br>
+
+      <div [formGroup]="form" fxLayout="column" fxLayoutGap="16px">
+        <div fxFlex="auto" fxLayout="column">
+          <mat-form-field fxFlex="grow" appearance="outline">
+            <mat-label>Nombre de usuario</mat-label>
+            <input formControlName="usuario" matInput required>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="grow" appearance="outline" class="register-form-field">
+            <mat-label>Correo electronico</mat-label>
+            <input formControlName="correo" matInput required>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="grow" appearance="outline">
+            <mat-label>Constraseña</mat-label>
+            <input [type]="inputType" formControlName="contrasena" matInput required>
+            <button (click)="toggleVisibility()" mat-icon-button matSuffix matTooltip="Toggle Visibility" type="button">
+              <mat-icon class="icon-color">{{visible ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-hint>Presiona el ojo para ver tu contraseña</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field fxFlex="grow" appearance="outline">
+            <mat-label>Constraseña (Confirmar)</mat-label>
+            <input [type]="inputType" formControlName="confirmarContrasena" matInput required>
+            <button (click)="toggleVisibility()" mat-icon-button matSuffix matTooltip="Toggle Visibility" type="button">
+              <mat-icon class="icon-color">{{visible ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-hint>Porfavor repita su contraseña</mat-hint>
+          </mat-form-field>
+        </div>
+        <button (click)="onFromSubmit()" color="primary" [disabled] = form.invalid mat-raised-button type="button" >
+          CREAR CUENTA
+        </button>
+        <p class="register-body-font">
+          ¿Ya tienes una cuenta?<br />
+          <a [routerLink]="['/login']">Ingresa Aquí</a>
+        </p>
+      </div>
+    </div>
+  </mat-card>
+</div>
